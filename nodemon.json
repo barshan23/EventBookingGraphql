@@ -1,8 +1,0 @@
-{
-  "env": {
-    "MONGO_USER": "graphql",
-    "MONGO_PASSWORD": "graphql",
-    "MONGO_DB": "graphql",
-    "SERVER_SECRET": "canyouimaginethislevelofsecurity"
-  }
-}
