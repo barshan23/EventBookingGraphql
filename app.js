@@ -10,6 +10,17 @@ const express = require('express'),
 // Use the body parser middleware
 app.use(bodyParser.json());
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Athorization');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+
+  return next();
+});
+
 // Use the auth check middleware
 app.use(isAuthenticated);
 
@@ -23,7 +34,7 @@ mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${
   process.env.MONGO_PASSWORD
 }@graphql-test-znnfd.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`)
   .then(() => {
-    app.listen(3000);
+    app.listen(8000);
   })
   .catch(err => {
     console.log(err);
