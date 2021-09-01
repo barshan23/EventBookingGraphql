@@ -1,0 +1,119 @@
+{
+    "info": {
+        "_postman_id": "f0540b67-539a-4fb3-97eb-609a4b6f5bbf",
+        "name": "tesat",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Sample endpoint: Returns details about a particular user",
+            "id": "07b7e8cd-b13c-4c31-a13b-81a75920c734",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/user?id=32199238",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "user"
+                    ],
+                    "query": [
+                        {
+                            "key": "id",
+                            "value": "32199238",
+                            "description": "(Required) ID of the user who is making the request"
+                        }
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "cc75e5c9-ce21-45a8-90ff-91a5a9cca727",
+                    "name": "Sample response: Details about a user by ID",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/user?id=32199238",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "user"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "32199238"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "disabled": false,
+                            "description": "A link to the next page of responses",
+                            "key": "x-next",
+                            "value": "fugiat id Lorem do"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"id\": -49590857,\n \"name\": \"ipsum in ut eu do\",\n \"tag\": \"laborum aute cupidatat irure\"\n}"
+                },
+                {
+                    "id": "2faab75b-5fe1-4167-aef6-1430d19237eb",
+                    "name": "Unexpected error",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/user?id=32199238",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "user"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "32199238"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n \"code\": 2907981,\n \"message\": \"aliquip culpa\"\n}"
+                }
+            ]
+        }
+    ],
+    "variable": [
+        {
+            "id": "82089362-1742-428b-b952-8bd427566bb5",
+            "key": "baseUrl",
+            "value": "http://localhost:30",
+            "type": "string"
+        }
+    ]
+}
